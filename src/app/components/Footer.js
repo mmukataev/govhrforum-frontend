@@ -39,10 +39,10 @@ export default function Footer() {
       </div>
 
       <div className="text-sm mx-auto flex items-center flex-col gap-[10px] mt-[20px] text-gray-400">
-        <div className="flex gap-[5px] items-center">
+        {/* <div className="flex gap-[5px] items-center">
           <FontAwesomeIcon icon={faEnvelope} className=" w-[12px] h-[12px]" />
           <p>info@HR.forum</p>
-        </div>
+        </div> */}
         <div className="flex gap-[5px] items-center">
           <FontAwesomeIcon icon={faCopyright} className="w-[12px] h-[12px]" />
           <p>{translations.Header.footer[currentLang]}</p>

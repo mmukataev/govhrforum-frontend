@@ -18,7 +18,7 @@ export default function News() {
     useEffect(() => {
         const fetchNews = async () => {
             try {
-                const response = await fetch('http://192.168.41.154:8000/api/news/');
+                const response = await fetch('https://api-govhrforum.apa.kz/api/news/');
                 if (!response.ok) throw new Error('Failed to fetch news');
                 const data = await response.json();
                 setNewsItems(data);

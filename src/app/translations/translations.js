@@ -4,13 +4,13 @@ const translations = {
     Header: {
         about: {
             en: "About",
-            ru: "О конференции",
-            kz: "Конференция туралы"
+            ru: "О форуме",
+            kz: "Форум туралы"
         },
         sections: {
-            en: "Sections",
-            ru: "Разделы",
-            kz: "Бөлімдер"
+            en: "Sessions",
+            ru: "Сессии",
+            kz: "Сессиялар"
         },
         speakers: {
             en: "Speakers",
@@ -20,7 +20,7 @@ const translations = {
         news: {
             en: "News",
             ru: "Новости",
-            kz: "Новости"
+            kz: "Жаңалықтар"
         },
         registration: {
             en: "Register",
@@ -30,20 +30,20 @@ const translations = {
         footer: {
             en: "2025 All rights reserved.",
             ru: "2025 Все права защищены.",
-            kz: "2025 Барлық құқықтар қорғалған."
+            kz: "2025 Құқықтардың бәрі қорғалған."
         }
     },
 
     Main: {
         title: {
-            en: "New Systems\nModern Services\nNovel Solutions",
-            ru: "Новые системы\nСовременные сервисы\nИнновационные решения",
-            kz: "Жаңа жүйелер\nҚазіргі қызметтер\nИнновациялық шешімдер"
+            en: "NEW SYSTEMS\nMODERN SERVICES\nNOVEL SOLUTIONS",
+            ru: "Новые системы\nСовременные УСЛУГИ\nИнновационные решения",
+            kz: "Жаңа жүйелер\nЗАМАНАУИ қызметтер\nТЫҢ ШЕШІМДЕР"
         },
         description: {
-            en: "STARTS\nJUNE 20TH, 2025\nAstana",
-            ru: "СТАРТ\n20 ИЮНЯ 2025\nАстана",
-            kz: "БАСТАЛАДЫ\n2025 ЖЫЛДЫҢ 20 МАУСЫМЫНДА\nАстана"
+            en: "JUNE 20,\n2025\nAstana",
+            ru: "20 ИЮНЯ\n2025\nАстана",
+            kz: "20 маусым\n2025\nАстана"
         },
         button: {
             en: "Program",
@@ -59,60 +59,64 @@ const translations = {
 
     About: {
         title: {
-            en: "About the Conference", 
-            ru: "О конференции",
-            kz: "Конференция туралы"
+            en: "About the Forum", 
+            ru: "О форуме",
+            kz: "Форум туралы"
         },
         description: {
-            en: "GovHR Forum — It is a unique platform for the exchange of experience, discussion of advanced technologies and the formation of new approaches in the field of human resource management in the public sector.\n\nBringing together managers, IT specialists, HR specialists and experts in the field of digitalization, the forum opens a dialogue on how modern technologies and innovative services are transforming HR processes in the public sector.\n\nThe Forum will become a point of attraction for everyone who is interested in the development of government HR services, strives to implement advanced solutions and build an effective, transparent and flexible HR management system.\n\nnnGovHR Forum is more than an event. This is a movement towards modern public administration.",
-            ru: "Форум GovHR — это уникальная платформа для обмена опытом, обсуждения передовых технологий и формирования новых подходов в области управления человеческими ресурсами в государственном секторе.\n\nОбъединяя руководителей, IT-специалистов, HR-экспертов и специалистов по цифровизации, форум открывает диалог о том, как современные технологии и инновационные сервисы трансформируют HR-процессы в государственном управлении.\n\nФорум станет точкой притяжения для всех, кто заинтересован в развитии государственных HR-сервисов, стремится внедрять передовые решения и строить эффективную, прозрачную и гибкую систему управления персоналом.\n\nGovHR Forum — это больше, чем просто событие. Это движение к современному государственному управлению.",
-            kz: "GovHR форумы — бұл мемлекеттік сектордағы адами ресурстарды басқару саласындағы тәжірибе алмасу, озық технологияларды талқылау және жаңа тәсілдерді қалыптастыруға арналған бірегей платформа.\n\nБасшыларды, IT мамандарын, HR саласының мамандарын және цифрландыру сарапшыларын біріктіре отырып, форум заманауи технологиялар мен инновациялық қызметтер мемлекеттік HR процестерін қалай өзгертетінін талқылауға мүмкіндік береді.\n\nФорум мемлекеттік HR қызметтерін дамытуға қызығушылық танытқан, озық шешімдерді енгізуге және тиімді, ашық әрі икемді кадрларды басқару жүйесін құруға ұмтылатындардың басын қосатын орталыққа айналады.\n\nGovHR форумы — бұл жай ғана іс-шара емес. Бұл — заманауи мемлекеттік басқаруға қадам."
+            en: "GovHR Forum is a premier platform for the exchange of best practices, exploration of cutting-edge technologies, and development of forward-looking approaches to human resource management in the public sector.\n\nBringing together public sector leaders, IT professionals, HR practitioners, and digital transformation experts, the Forum creates a space for meaningful dialogue on how emerging technologies and innovative services are reshaping government HR processes.\n\nMore than just an event, GovHR Forum is a catalyst for those committed to advancing public HR services, driving smart solutions, and building transparent, agile, and high-performing human capital systems.\n\nGovHR Forum — empowering smart, transparent, and future-ready public administration.",
+            ru: "GovHR Форум - это ведущая платформа для обмена лучшими практиками, изучения передовых технологий и выработки прогрессивных подходов в управлении человеческими ресурсами в государственном секторе.\n\nОбъединяя лидеров государственного управления, IT-специалистов, HR-практиков и экспертов по цифровизации, Форум создает пространство для конструктивного диалога по вопросам внедрения современных технологий и инновационных решений в трансформацию кадровых процессов в системе государственного управления.\n\nGovHR Форум — это важный катализатор для всех, кто стремится совершенствовать государственные HR-сервисы, внедрять интеллектуальные решения и формировать прозрачную, гибкую и эффективную систему управления человеческим капиталом.\n\nGovHR Форум — к эффективному и прозрачному государственному управлению будущего.",
+            kz: "GovHR Форумы – бұл мемлекеттік секторда адам ресурстарын басқару саласындағы заманауи тәсілдерді дамытуға, үздік тәжірибелермен алмасуға, сондай-ақ цифрлық шешімдерді зерделеуге арналған кәсіби алаң.\n\nФорум мемлекеттік басқару саласының көшбасшыларын, IT мамандарын, HR практиктері мен цифрландыру саласындағы сарапшыларды біріктіре отырып, мемлекеттік басқару жүйесіндегі кадрлық үдерістерді трансформациялау мәселелерінде заманауи технологиялар мен инновациялық шешімдерді енгізу бойынша конструктивті диалог жүргізуге мүмкіндік береді.\n\nGovHR Форумы – мемлекеттік кадр қызметін жетілдіруге, заманауи HR құралдарын енгізуге және адами ресурстарды басқару жүйесін жаңа сапалық деңгейге көтеруге бағытталған маңызды катализатор.\n\nGovHR Форумы — болашақтың тиімді әрі ашық мемлекеттік басқаруына бастар жол."
         },
     },
 
     Sections: {
-        ection: "Sections",
+        section: {
+            en: "SESSION",
+            ru: "СЕССИЯ",
+            kz: "СЕССИЯ"
+        },
         title: {
-            en: "Sections",
-            ru: "Разделы",
-            kz: "Бөлімдер"
+            en: "Sessions",
+            ru: "Сессии",
+            kz: "Сессия"
         },
         items: [
             {
                 id: 1,
                 title: {
-                    en: "AI in Gov",
-                    ru: "Искусственный интеллект в госуправлении",
-                    kz: "Жасанды интеллект"
+                    en: "AI IN GOV",
+                    ru: "ИСКУССТВЕННЫЙ ИНТЕЛЛЕКТ В ГОСУДАРСТВЕННОМ УПРАВЛЕНИИ",
+                    kz: "МЕМЛЕКЕТТІК БАСҚАРУДАҒЫ ЖАСАНДЫ ИНТЕЛЛЕКТ"
                 },
                 description: {
-                    en: "Providing Quality Services",
-                    ru: "Providing Quality Services",
-                    kz: "Сапалы мемлекеттік қызмет "
+                    en: "Interactive Panel:",
+                    ru: "Интерактивная панель:",
+                    kz: "Интерактивті панель:"
                 },
                 hovertext: {
-                    en: "The integration of AI into civil service (selection process, performance evaluation of civil servants, analytics, recruitment, planning, etc.).",
-                    ru: "The integration of AI into civil service (selection process, performance evaluation of civil servants, analytics, recruitment, planning, etc.).",
-                    kz: "Мемлекеттік қызметке іріктеу процесінде және мемлекеттік қызметшілердің тиімділігін бағалау кезінде AI енгізу"
+                    en: "Integrating Artificial Intelligence into the Civil Service",
+                    ru: "Интеграция искусственного интеллекта в систему государственной службы",
+                    kz: "Мемлекеттік қызметке жасанды интеллектіні интеграциялау"
                 },
                 image: "/sections/1.jpg",
             },
             {
                 id: 2,
                 title: {
-                    en: "Unified HR Systems",
-                    ru: "Единые системы управления персоналом",
-                    kz: "Біртұтас кадр жүйелері "
+                    en: "UNIFIED HR SYSTEMS",
+                    ru: "ЕДИНЫЕ HR-СИСТЕМЫ",
+                    kz: "БІРТҰТАС КАДР ЖҮЙЕЛЕРІ"
                 },
                 description: {
-                    en: "Human Resource Management",
-                    ru: "Human Resource Management",
-                    kz: "Адам ресурстарын басқару"
+                    en: "Fishbowl Session:",
+                    ru: "Fishbowl сессия:",
+                    kz: "Fishbowl сессия:"
                 },
                 hovertext: {
-                    en: "Formation of the architecture of human resource management; Automation of HR processes to enable strategic decision-making.",
-                    ru: "Formation of the architecture of human resource management; Automation of HR processes to enable strategic decision-making.",
-                    kz: "Адами ресурстарды басқарудың архитектурасын қалыптастыру;\n\nСтратегиялық шешімдер қабылдауға мүмкіндік беретін, HR процестерін автоматтандыру."
+                    en: "Establishing Unified Human Resource Management Systems",
+                    ru: "Создание единой системы управления человеческими ресурсами",
+                    kz: "Персоналды басқарудың біртұтас жүйелерін қалыптастыру"
                 },
                 image: "/sections/2.jpg",
             },
@@ -120,18 +124,18 @@ const translations = {
                 id: 3,
                 title: {
                     en: "HR Analytics",
-                    ru: "HR аналитика",
-                    kz: "HR аналитика"
+                    ru: "HR-АНАЛИТИКА",
+                    kz: "HR АНАЛИТИКА"
                 },
                 description: {
-                    en: "Data Management",
-                    ru: "Data Management",
-                    kz: "Деректерді өңдеу"
+                    en: "Foresight Session:",
+                    ru: "Форсайт сессия:",
+                    kz: "Форсайт сессия: "
                 },
                 hovertext: {
-                    en: "Strategic planning, analytics and forecasting of HR; Formation of Proactive, Data-Driven HR.",
-                    ru: "Strategic planning, analytics and forecasting of HR; Formation of Proactive, Data-Driven HR.",
-                    kz: "Адам ресурстарын стратегиялық жоспарлау мен болжауды жақсарту;\n\nДеректерге негізделген проактивті HR қалыптастыру"
+                    en: "Data-Driven Proactive HR Development and Strategic HR Planning",
+                    ru: "Формирование HR на основе данных и стратегическое планирование человеческих ресурсов",
+                    kz: "Деректерге негізделген проактивті HR қалыптастыру және адам ресурстарын стратегиялық жоспарлау"
                 },
                 image: "/sections/3.jpg",
             },
@@ -139,18 +143,18 @@ const translations = {
                 id: 4,
                 title: {
                     en: "Advanced Training System",
-                    ru: "Advanced Training System",
-                    kz: "Оқытудың озық жүйесі"
+                    ru: "ПЕРЕДОВАЯ СИСТЕМА ОБУЧЕНИЯ",
+                    kz: "ОҚЫТУДЫҢ ОЗЫҚ ЖҮЙЕСІ"
                 },
                 description: {
-                    en: "Training and Development",
-                    ru: "Training and Development",
-                    kz: "Оқыту және дамыту"
+                    en: "Interactive Panel:",
+                    ru: "Интерактивная панель:",
+                    kz: "Интерактивті панель: "
                 },
                 hovertext: {
-                    en: "Advancing the knowledge and skills of HR; Ensuring the necessary qualifications for the future workforce.",
-                    ru: "Advancing the knowledge and skills of HR; Ensuring the necessary qualifications for the future workforce.",
-                    kz: "HR мамандарының, қызметкерлердің білімі мен дағдыларын жетілдіру және болашақ жұмыс күшіне қажетті біліктілікпен қамтамасыз ету."
+                    en: "Training and Competence Development for Civil Servants",
+                    ru: "Обучение и развитие компетенций государственных служащих",
+                    kz: "Мемлекеттік қызметкерлерді оқыту және құзыреттерін жетілдіру"
                 },
                 image: "/sections/4.jpg",
             }
@@ -169,7 +173,7 @@ const translations = {
         title: {
             en: "News",
             ru: "Новости",
-            kz: "Новости"
+            kz: "Жаңалықтар"
         },
         items: [
             {
@@ -228,12 +232,12 @@ const translations = {
         title: {
             en: "New Systems, Modern Services, Novel Solutions",
             ru: "Новые системы, современные сервисы, инновационные решения",
-            kz: "Жаңа жүйелер, заманауи сервистер, тың шешімдер"
+            kz: "ЖАҢА ЖҮЙЕЛЕР, ЗАМАНАУИ ҚЫЗМЕТТЕР, ТЫҢ ШЕШІМДЕР"
         },
         description: {
             en: "June 20, 2025 | Astana, Abay 33A",
             ru: "20 июня 2025 | Астана, Абая 33А",
-            kz: "2025 жылғы 20 маусым | Астана, Абай 33А"
+            kz: "20 МАУСЫМ 2025 | АСТАНА, АБАЙ 33А"
         },
         name: {
             en: "Name",
@@ -253,7 +257,7 @@ const translations = {
         organiztion: {
             en: "Organization",
             ru: "Организация",
-            kz: "Ұйым"
+            kz: "Ұйым атауы"
         },
         position: {
             en: "Position",
@@ -263,51 +267,69 @@ const translations = {
         country: {
             en: "Country",
             ru: "Страна",
-            kz: "Ел"
+            kz: "Мемлекет"
         },
         email: {
             en: "Email",
             ru: "Электронная почта",
-            kz: "Электрондық пошта"
+            kz: "Электрондық пошта адресі"
         },
         phone: {
             en: "Phone",
             ru: "Телефон",
-            kz: "Телефон"
+            kz: "Телефон нөмірі"
         },
         section: {
             en: "Forum Interest Areas:",
             ru: "Интересующие направления форума:",
-            kz: "Форумның қызықты бағыттары:"
+            kz: "Форум тақырыптары:"
         },
         s1: {
-            en: "Integration of Artificial Intelligence in Public Service",
-            ru: "Интеграция Искусственного Интеллекта в Госслужбу",
-            kz: "Мемлекеттік қызметте жасанды интеллектті интеграциялау"
+            en: "Interactive Session - “Integration of Artificial Intelligence in Public Service”",
+            ru: "ИНТЕРАКТИВНАЯ ПАНЕЛЬ - «Интеграция искусственного интеллекта в систему государственной службы»",
+            kz: "ИНТЕРАКТИВТІ ПАНЕЛЬ - «Мемлекеттік қызметке жасанды интеллектіні интеграциялау»"
         },
 
         s2: {
-            en: "Fishbowl Session - Development of Unified Personnel Management Systems",
-            ru: "Fishbowl Session - Развитие Единой системы управления персоналом",
-            kz: "Fishbowl Session - Біртұтас кадрларды басқару жүйесін дамыту"
+            en: "Fishbowl Session - “Development of Unified Personnel Management Systems”",
+            ru: "FISHBOWL СЕССИЯ -«Создание единой системы управления человеческими ресурсами»",
+            kz: "FISHBOWL СЕССИЯ - «Персоналды басқарудың біртұтас жүйелерін қалыптастыру»"
         },
 
         s3: {
-            en: "Foresight Session - Proactive, Data-Driven HR Strategies and Strategic Workforce Planning",
-            ru: "Foresight Session - Проактивные, основанные на данных HR стратегии и стратегическое планирование рабочей силы",
-            kz: "Foresight Session - Проактивті, деректерге негізделген HR стратегиялары және стратегиялық жұмыс күшін жоспарлау"
+            en: "Foresight Session - “Proactive, Data-Driven HR Strategies and Strategic Workforce Planning”",
+            ru: "ФОРСАЙТ СЕССИЯ - «Формирование HR на основе данных и стратегическое планирование человеческих ресурсов»",
+            kz: "ФОРСАЙТ СЕССИЯ - «Деректерге негізделген проактивті HR қалыптастыру және адам ресурстарын стратегиялық жоспарлау»"
         },
 
         s4: {
-            en: "Training and Competency Development for Civil Servants",
-            ru: "Обучение и развитие компетенций госслужащих",
-            kz: "Мемлекеттік қызметшілерді оқыту және біліктілігін арттыру"
+            en: "Interactive Session - “Training and Competency Development for Civil Servants”",
+            ru: "ИНТЕРАКТИВНАЯ ПАНЕЛЬ - «Обучение и развитие компетенций государственных служащих»",
+            kz: "ИНТЕРАКТИВТІ ПАНЕЛЬ - «Мемлекеттік қызметкерлерді оқыту және құзыреттерін жетілдіру»"
         },
 
         confirm: {
             en: "I consent to the use of my data for organizational purposes and the use of photos/videos taken during the event.",
-            ru: "Я даю согласие на использование моих данных в организационных целях и на использование фото/видео, сделанных во время мероприятия.",
-            kz: "Мен деректерімді ұйымдастыру мақсатында және іс-шара кезінде түсірілген фото/бейнемазмұнды пайдалануға келісім беремін."
+            ru: "Я даю согласие на использование моих данных в организационных целях, а также на использование фото- и видеоматериалов, снятых во время мероприятия.",
+            kz: "Мен өз деректерімді ұйымдастыру рәсімдері аясында пайдалануға, сондай-ақ іс-шара барысында түсірілген фото- және бейнематериалдарды пайдалануға келісімімді беремін."
+        },
+
+        photo: {
+            en: "Upload photo 3x4",
+            ru: "Загрузить фото 3x4",
+            kz: "Суретті жүктеу 3x4"
+        },
+
+        iin: {
+            en: "IIN (Individual Identification Number)",
+            ru: "ИИН (Идентификационный номер)",
+            kz: "ЖСН (Жеке сәйкестендіру нөмірі)"
+        },
+
+        pasport: {
+            en: "Passport Number",
+            ru: "Номер паспорта",
+            kz: "Паспорт нөмірі"
         },
 
         button: {
@@ -321,98 +343,68 @@ const translations = {
 ForesightTopics: {
   title: {
     en: "Foresight Topics",
-    ru: "Форсайт-темы",
-    kz: "Форсайт тақырыптары"
+    ru: "Тематические задания",
+    kz: "Тақырыптық тапсырмалар"
   },
   topics: [
     {
       id: "skillsMap",
       en: {
-        title: "Future Skills Map (Skill Map 2030):",
+        title: "Future Skill Map 2030",
         text: "The skill map that will guide the workforce development in 2030, focusing on skills needed for the future workforce."
       },
       ru: {
-        title: "Карта навыков будущего (Skill Map 2030):",
+        title: "Карта будущих навыков 2030",
         text: "Карта навыков, которая определит развитие кадров к 2030 году, с акцентом на навыки будущего."
       },
       kz: {
-        title: "Болашақ дағдылар картасы (Skill Map 2030):",
+        title: "Дағдылар картасы 2030",
         text: "2030 жылға дейін кадрларды дамытуға бағытталған болашақ дағдылар картасы."
       }
     },
     {
       id: "digitalTwin",
       en: {
-        title: "The Digital Twin of a Civil Servant: Opportunities and Risks:",
+        title: "Decision-Making Model of Future HR",
         text: "Exploring the concept of digital twins for civil servants, and the potential risks and benefits in public service."
       },
       ru: {
-        title: "Цифровой двойник госслужащего: возможности и риски:",
+        title: "Модель принятия решений HR будущего",
         text: "Изучение концепции цифровых двойников для госслужащих, а также возможные риски и преимущества."
       },
       kz: {
-        title: "Мемлекеттік қызметшінің цифрлық егізі: мүмкіндіктер мен қауіптер:",
+        title: "Болашақтың HR шешімдерін қабылдау моделі",
         text: "Мемлекеттік қызметшілер үшін цифрлық егіздер ұғымын зерттеу және оның артықшылықтары мен тәуекелдері."
       }
     },
     {
       id: "hrModel",
       en: {
-        title: "Decision-Making Model of Future HR:",
+        title: "Data Policy in the Organization of the Future",
         text: "Examining the decision-making process in Human Resources as it evolves to meet future needs and challenges."
       },
       ru: {
-        title: "Модель принятия решений HR будущего:",
+        title: "Политика данных в организации будущего",
         text: "Анализ процесса принятия решений в HR в контексте его эволюции для решения будущих задач."
       },
       kz: {
-        title: "Болашақ HR шешім қабылдау моделі:",
+        title: "Ұйымдардағы деректер саясаты",
         text: "Болашақ қажеттіліктер мен мәселелерге бейімделу барысындағы HR шешім қабылдау үдерісін талдау."
       }
     },
     {
       id: "futureMorning",
       en: {
-        title: "A Morning in the Life of a Future Civil Servant:",
+        title: "Archetypes of the HR Function in 2035",
         text: "Imagining the daily routine of a civil servant in the future, and how technology will influence their workday."
       },
       ru: {
-        title: "Утро будущего госслужащего:",
+        title: "Архетипы HR-функции 2035",
         text: "Воображаемый распорядок дня госслужащего будущего и влияние технологий на его рабочий день."
       },
       kz: {
-        title: "Болашақ мемлекеттік қызметшінің таңы:",
+        title: "HR функциясының архетиптері - 2035",
         text: "Болашақ мемлекеттік қызметшінің күн тәртібі және технологиялардың оның жұмыс күніне әсері."
-      }
-    },
-    {
-      id: "digitalEthics",
-      en: {
-        title: "Digital Ethics in HR Analytics:",
-        text: "Addressing ethical considerations when using data and analytics in human resources, ensuring fairness and privacy."
-      },
-      ru: {
-        title: "Цифровая этика в HR-аналитике:",
-        text: "Этические аспекты использования данных и аналитики в HR: обеспечение справедливости и конфиденциальности."
-      },
-      kz: {
-        title: "HR аналитикасындағы цифрлық этика:",
-        text: "HR саласындағы деректер мен аналитиканы қолданудағы этикалық мәселелер — әділеттілік пен құпиялылықты сақтау."
-      }
-    },
-    {
-      id: "hrArchetypes",
-      en: {
-        title: "Archetypes of the HR Function in 2035:",
-        text: "Investigating the potential transformations in Human Resources by 2035 and how HR roles and responsibilities might evolve."
-      },
-      ru: {
-        title: "Архетипы HR-функции в 2035 году:",
-        text: "Исследование возможных трансформаций HR-функции к 2035 году и эволюция ролей и обязанностей HR."
-      },
-      kz: {
-        title: "2035 жылғы HR функциясының архетиптері:",
-        text: "2035 жылға қарай HR функцияларының ықтимал өзгерістерін және HR рөлдері мен міндеттерінің дамуын зерттеу."
       }
     }
   ]

@@ -21,18 +21,25 @@ export default function Sections() {
         {items.map(({ id, title, description, hovertext, image }) => (
           <div
             key={id}
-            className="group w-full relative flex flex-col justify-end p-[25px] h-[650px] bg-cover bg-center rounded-[10px] overflow-hidden"
+            className="group w-full relative flex flex-col justify-end p-[15px] h-[650px] bg-cover bg-center rounded-[10px] overflow-hidden"
             style={{ backgroundImage: `url(${image})` }}
           >
-            <p className="text-[24px] text-[#bcbcbc] uppercase leading-[26px] z-2">
-              {description[lang] || description.en}
-            </p>
-            <h5 className="text-[50px] font-bold text-white uppercase leading-[52px] z-2 mt-[10px]">
-              {title[lang] || title.en}
-            </h5>
+            <div className="h-[200px] z-9">
+              <p className="text-[24px] text-[#bcbcbc] uppercase leading-[26px] z-2">
+                {description[lang] || description.en}
+              </p>
+              <h5
+                className={`${
+                  lang === 'kz' || lang === 'ru' ? 'text-[30px] leading-[36px]' : 'text-[50px] leading-[52px]'
+                } font-bold text-white uppercase z-2 mt-[10px]`}
+              >
+                  {title[lang] || title.en}
+              </h5>
+            </div>
+
 
             <span className="opacity-[0.5] uppercase transform -rotate-90 inline-block w-fit origin-right text-[100px] text-white absolute top-0 right-[40px] leading-[85px]">
-              section&nbsp;#{id}
+              {section[lang] || title.en}&nbsp;#{id}
             </span>
 
             <div className="absolute w-full h-full z-1 left-0 top-0" style={{ backgroundImage: 'url(/overlaymain.svg)' }}></div>

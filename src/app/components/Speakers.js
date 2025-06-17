@@ -27,20 +27,23 @@ export default function Speakers() {
         return () => window.removeEventListener('resize', updateItemsPerPage);
     }, []);
 
-    useEffect(() => {
-        const fetchSpeakers = async () => {
-            try {
-                const response = await fetch('http://192.168.41.154:8000/api/speakers/');
-                if (!response.ok) throw new Error('Failed to fetch speakers');
-                const data = await response.json();
-                setSpeakers(data);
-            } catch (error) {
-                console.error('Error fetching speakers:', error);
-            }
-        };
+useEffect(() => {
+    const fetchSpeakers = async () => {
+        try {
+            const response = await fetch('https://api-govhrforum.apa.kz/api/speakers/');
+            if (!response.ok) throw new Error('Failed to fetch speakers');
+            const data = await response.json();
+            // Сортируем по priority по убыванию (больше priority — выше в списке)
+            data.sort((a, b) => b.priority - a.priority);
+            setSpeakers(data);
+        } catch (error) {
+            console.error('Error fetching speakers:', error);
+        }
+    };
 
-        fetchSpeakers();
-    }, []);
+    fetchSpeakers();
+}, []);
+
 
     const displayedSpeakers = speakers.slice(currentIndex, currentIndex + itemsPerPage);
 

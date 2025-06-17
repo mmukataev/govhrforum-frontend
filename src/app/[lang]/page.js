@@ -14,7 +14,7 @@ export default function Home({ params }) {
       <div id="home" className="relative z-0 h-screen bg-[#007aff] flex ">
         <div className="z-[4] relative container mx-auto my-auto flex flex-col gap-[30px]">
           <div className="flex flex-col lg:flex-row gap-[10px] xl:items-center sm:items-start">
-            <p className="p-[40px] w-fit uppercase text-white bg-[rgba(255,255,255,0.1)] xl:text-[36px] text-[22px] rounded-[10px] whitespace-pre-line">{translations.Main.description[lang]}</p>
+            <p className="p-[40px] w-fit uppercase text-white bg-[rgba(255,255,255,0.1)] xl:text-[26px] text-[22px] rounded-[10px] whitespace-pre-line">{translations.Main.description[lang]}</p>
             <h1 className="uppercase text-white xl:text-[68px] text-[50px] xl:leading-[68px] leading-[50px] whitespace-pre-line ">{translations.Main.title[lang]}</h1>
           </div>
 
@@ -22,7 +22,14 @@ export default function Home({ params }) {
                 {translations.Main.button[lang]}
                 <object data="/program.svg" className="ml-[10px] w-[20px] h-[20px]" />
             </Link>
+
         </div>
+
+            <img
+              src="/ornament-white.svg"
+              alt="ornament"
+              className="w-[300px] h-full absolute z-3 opacity-[10%]  object-cover top-0 right-0"
+            />
         <img
           src="/overlaymain.svg"
           alt="Logo"
@@ -45,7 +52,7 @@ export default function Home({ params }) {
           <h3 className="w-fit pb-[30px] mb-[40px] text-[64px] font-bold text-[var(--customaccent)] border-b-4 border-[var(--customaccent)]">
             {translations.About.title[lang]}
           </h3>
-          <p className="text-[var(--customtext)] text-[18px] whitespace-pre-line">
+          <p className="text-[var(--customtext)] text-[18px] whitespace-pre-line text-justify">
             {translations.About.description[lang]}
           </p>
         </div>
@@ -59,7 +66,7 @@ export default function Home({ params }) {
 
     <Sections />
     <Speakers />
-    <News />
+    {/* <News /> */}
     <Partners />
 
       <div className="container mx-auto flex flex-col md:flex-row mt-[100px] h-full">

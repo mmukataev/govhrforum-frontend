@@ -2,6 +2,7 @@
 
 :root {
   --background: #ffffff;
+  --custombackground: #ffffff;
   --foreground: #171717;
 
   --customaccent: #04B3B3;
@@ -27,7 +28,7 @@ html {
 }
 
 body {
-  background: var(--background);
+  background: var(--custombackground);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }

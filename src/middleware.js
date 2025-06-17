@@ -6,7 +6,7 @@ export function middleware(req) {
 
   // Если запрашивается корневая страница, перенаправляем на /kz
   if (pathname === "/") {
-    return NextResponse.redirect(new URL("/kz", req.url), 301); // Редирект на /kz
+    return NextResponse.redirect(new URL("/en", req.url), 301); // Редирект на /kz
   }
 
   return NextResponse.next(); // Если нет редиректа, продолжим выполнение запроса

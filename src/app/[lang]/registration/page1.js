@@ -5,12 +5,9 @@ import translations from '@/translations/translations';
 import Link from 'next/link';
 
 export default function Registration() {
-    // const [step, setStep] = useState(1);
-    // const [iin, setIIN] = useState('');
-    // const validateIIN = (value) => /^\d{12}$/.test(value);
-const [isKazakhCitizen, setIsKazakhCitizen] = useState(null);
-const [iin, setIIN] = useState('');
-
+    const [step, setStep] = useState(1);
+    const [iin, setIIN] = useState('');
+    const validateIIN = (value) => /^\d{12}$/.test(value);
     const [foresightTopic, setForesightTopic] = useState('');
 
 
@@ -47,9 +44,20 @@ const handleChange = (e) => {
 const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.consent) {
-        alert('You must consent to the use of your data.');
+    if (step === 1) {
+        if (!formData.consent) {
+            alert('You must consent to the use of your data.');
+            return;
+        }
+        setStep(2); // переход ко второму шагу
         return;
+    }
+
+    if (step === 2) {
+        if (formData.country === 'Казахстан' && iin.length !== 12) {
+            alert('ИИН должен содержать ровно 12 цифр');
+            return;
+        }
     }
 
     const formPayload = new FormData();
@@ -58,12 +66,8 @@ const handleSubmit = async (e) => {
             formPayload.append(key, formData[key]);
         }
     }
-
-    // Добавим foresightTopic, если выбрана foresightSession
-    if (formData.session === "foresightSession") {
-        formPayload.append("foresight_topics", JSON.stringify([foresightTopic]));
-    }
     formPayload.append("iin", iin);
+
     try {
         const response = await fetch('https://api-govhrforum.apa.kz/api/registration/', {
             method: 'POST',
@@ -76,7 +80,7 @@ const handleSubmit = async (e) => {
             throw new Error('Something went wrong with the registration.');
         }
 
-        await response.json();
+        const data = await response.json();
         setShowModal(true);
         setFormData({
             name: '',
@@ -91,15 +95,12 @@ const handleSubmit = async (e) => {
             consent: false,
             photo: null,
         });
-
         setIIN('');
-        setIsKazakhCitizen(null);
-        setForesightTopic('');
+        setStep(1);
     } catch (error) {
         alert(error.message);
     }
 };
-
 
 
 
@@ -117,6 +118,7 @@ const handleSubmit = async (e) => {
                 />
             </div>
             <div className="container flex flex-col gap-[10px] max-w-4xl mx-auto mt-[100px]">
+                {step === 1 && (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-[10px]">
                     <div className="flex gap-[10px]">
                         <label htmlFor="name">{translations.Registration.name[lang]}:
@@ -157,72 +159,6 @@ const handleSubmit = async (e) => {
                         /> */}
 
                     </div>
-                    <div className="mt-4">
-                        <label className="block font-semibold mb-2">
-                            {lang === 'ru'
-                                ? 'Вы гражданин Казахстана?'
-                                : lang === 'kz'
-                                ? 'Сіз Қазақстан азаматысыз ба?'
-                                : 'Are you a citizen of Kazakhstan?'}
-                        </label>
-                        <div className="flex items-center space-x-4">
-                            <label className="flex items-center">
-                                <input
-                                    type="radio"
-                                    name="isKazakhCitizen"
-                                    value="yes"
-                                    checked={isKazakhCitizen === true}
-                                    onChange={() => {
-                                        setIsKazakhCitizen(true);
-                                        setFormData({ ...formData, country: "Kazakhstan" });
-                                    }}
-                                    required
-                                    className="mr-2"
-                                />
-                                {lang === 'ru' ? 'Да' : lang === 'kz' ? 'Иә' : 'Yes'}
-                            </label>
-                            <label className="flex items-center">
-                                <input
-                                    type="radio"
-                                    name="isKazakhCitizen"
-                                    value="no"
-                                    checked={isKazakhCitizen === false}
-                                    onChange={() => {
-                                        setIsKazakhCitizen(false);
-                                        setFormData({ ...formData, country: "Other" });
-                                    }}
-                                    required
-                                    className="mr-2"
-                                />
-                                {lang === 'ru' ? 'Нет' : lang === 'kz' ? 'Жоқ' : 'No'}
-                            </label>
-                        </div>
-                    </div>
-
-                    {isKazakhCitizen !== null && (
-                        <label htmlFor="iin" className="block mt-4">
-                            {isKazakhCitizen
-                                ? (lang === 'ru' ? 'ИИН' : lang === 'kz' ? 'ЖСН' : 'IIN')
-                                : (lang === 'ru' ? 'Укажите номер документа' : lang === 'kz' ? 'Құжат нөмірі' : 'Document Number')}
-                            <input
-                                type="text"
-                                id="iin"
-                                name="iin"
-                                value={iin}
-                                onChange={(e) => {
-                                    const value = isKazakhCitizen
-                                        ? e.target.value.replace(/\D/g, '').slice(0, 12)
-                                        : e.target.value;
-                                    setIIN(value);
-                                }}
-                                required
-                                className="border rounded px-4 py-2 w-full mt-1"
-                            />
-                        </label>
-                    )}
-
-
-
 
                     <div className="flex gap-[10px]">
                         <label htmlFor="organization">{translations.Registration.organiztion[lang]}:
@@ -318,7 +254,7 @@ const handleSubmit = async (e) => {
                             {translations.Registration.s4[lang]}
                         </label>
 
-                        <label htmlFor="foresightSession" className="hidden flex items-center">
+                        <label htmlFor="foresightSession" className="flex items-center">
                             <input
                                 type="radio"
                                 id="foresightSession"
@@ -338,26 +274,23 @@ const handleSubmit = async (e) => {
                                     {translations.ForesightTopics.title[lang] || translations.ForesightTopics.title["en"]}
                                 </legend>
                                 <div className="space-y-2">
-                            {translations.ForesightTopics.topics.map((topic) => {
-                                const displayLabel = topic[lang]?.title || topic.en.title;
-                                const valueRu = topic.ru.title;
-
-                                return (
-                                    <label key={topic.id} className="flex items-center">
-                                        <input
-                                            type="radio"
-                                            name="foresightTopic"
-                                            value={valueRu}
-                                            checked={foresightTopic === valueRu}
-                                            onChange={(e) => setForesightTopic(e.target.value)}
-                                            className="mr-2"
-                                            required
-                                        />
-                                        {displayLabel}
-                                    </label>
-                                );
-                            })}
-
+                                    {translations.ForesightTopics.topics.map((topic) => {
+                                        const label = `${topic[lang]?.title || topic.en.title}`;
+                                        return (
+                                            <label key={topic.id} className="flex items-center">
+                                                <input
+                                                    type="radio"
+                                                    name="foresightTopic"
+                                                    value={label}
+                                                    checked={foresightTopic === label}
+                                                    onChange={(e) => setForesightTopic(e.target.value)}
+                                                    className="mr-2"
+                                                    required
+                                                />
+                                                {label}
+                                            </label>
+                                        );
+                                    })}
                                 </div>
                             </fieldset>
                         )}
@@ -397,18 +330,83 @@ const handleSubmit = async (e) => {
                         {translations.Registration.button[lang]}
                     </button>
                 </form>
+            )}
+            {step === 2 && (
+<form onSubmit={handleSubmit} className="flex flex-col gap-[10px]">
+  <fieldset className="mt-4">
+    <legend className="mb-2 font-semibold">{translations.Registration.country[lang]}</legend>
+    <div className="flex items-center space-x-6">
+      <label className="flex items-center">
+        <input
+          type="radio"
+          name="country"
+          value="Казахстан"
+          checked={formData.country === 'Казахстан'}
+          onChange={handleChange}
+          className="mr-2"
+          required
+        />
+        {lang === 'ru' ? 'Гражданин Казахстана' : lang === 'kz' ? 'Қазақстан азаматы' : 'Citizen of Kazakhstan'}
+      </label>
+      <label className="flex items-center">
+        <input
+          type="radio"
+          name="country"
+          value="Не гражданин Казахстана"
+          checked={formData.country === 'Не гражданин Казахстана'}
+          onChange={handleChange}
+          className="mr-2"
+        />
+        {lang === 'ru' ? 'Не гражданин Казахстана' : lang === 'kz' ? 'Қазақстан азаматы емес' : 'Not a citizen of Kazakhstan'}
+      </label>
+    </div>
+  </fieldset>
+
+  <label htmlFor="iin" className="block mb-2 text-lg font-semibold">
+  {formData.country === 'Казахстан'
+    ? (lang === 'ru' ? 'Введите ИИН' : lang === 'kz' ? 'ЖСН енгізіңіз' : 'Enter your IIN')
+    : (lang === 'ru' ? 'Введите номер документа' : lang === 'kz' ? 'Құжат нөмірін енгізіңіз' : 'Enter your document number')}
+
+  <input
+    type="text"
+    id="iin"
+    name="iin"
+    value={iin}
+    onChange={(e) => {
+      // Если гражданин, оставляем только цифры и максимум 12
+      if (formData.country === 'Казахстан') {
+        setIIN(e.target.value.replace(/\D/g, '').slice(0, 12));
+      } else {
+        // Иначе можно вводить любой текст (не ограничиваем)
+        setIIN(e.target.value);
+      }
+    }}
+    maxLength={formData.country === 'Казахстан' ? 12 : undefined}
+    className="border rounded px-4 py-2 w-full text-lg"
+    required
+  />
+  </label>
+
+  <button
+    type="submit"
+    className="mt-4 px-6 py-2 bg-[var(--customaccent)] text-white rounded"
+  >
+    {lang === 'ru' ? 'Завершить регистрацию' : lang === 'kz' ? 'Тіркеуді аяқтау' : 'Finish Registration'}
+  </button>
+</form>
+
+            )}
             </div>
             {showModal && (
                 <div className="fixed inset-0 bg-[rgba(0,0,0,0.7)] flex items-center justify-center z-50">
                     <div className="bg-white p-6 rounded-md shadow-lg max-w-md w-full text-center">
-                        <h2 className="text-xl font-bold mb-4">
-                            {lang === 'ru' ? 'Регистрация завершена!' : lang === 'kz' ? 'Тіркеу аяқталды!' : 'Registration completed!'}</h2>
+                        <h2 className="text-xl font-bold mb-4">{lang === 'ru' ? 'Регистрация прошла успешно!' : lang === 'kz' ? 'Тіркеу сәтті өтті!' : 'Registration Successful!'}</h2>
                         <p className="mb-4">
                             {lang === 'ru'
-                                ? 'Вы успешно зарегистрированы на Форум.'
+                                ? 'Спасибо за регистрацию. Мы свяжемся с вами при необходимости.'
                                 : lang === 'kz'
-                                ? 'Сіз Форумға сәтті тіркелдіңіз.'
-                                : 'You have successfully registered for the Forum.'}
+                                ? 'Тіркелгеніңіз үшін рахмет. Қажет болған жағдайда сізбен хабарласамыз.'
+                                : 'Thank you for registering. We will contact you if necessary.'}
                         </p>
                         <Link
                             href="/"
