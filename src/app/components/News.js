@@ -21,7 +21,11 @@ export default function News() {
                 const response = await fetch('https://api-govhrforum.apa.kz/api/news/');
                 if (!response.ok) throw new Error('Failed to fetch news');
                 const data = await response.json();
-                setNewsItems(data);
+
+                // Сортировка: чем выше priority, тем раньше в списке
+                const sorted = data.sort((a, b) => b.priority - a.priority);
+
+                setNewsItems(sorted);
             } catch (error) {
                 console.error('Error fetching news:', error);
             }
@@ -29,6 +33,7 @@ export default function News() {
 
         fetchNews();
     }, []);
+
 
     // Обновление колонок в зависимости от ширины экрана
     useEffect(() => {

@@ -29,20 +29,15 @@ export default function Footer() {
           <Link href={`/${currentLang}/#speakers`}>{translations.Header.speakers[currentLang]}</Link>
           <Link href={`/${currentLang}/#news`}>{translations.Header.news[currentLang]}</Link>
         </nav>
-
-        <Link
-          href={`/${currentLang}/registration`}
-          className="px-[30px] h-[50px] flex text-white text-[20px] items-center rounded-[360px] bg-[var(--customaccent)]"
-        >
-          {translations.Header.registration[currentLang]}
-        </Link>
       </div>
 
-      <div className="text-sm mx-auto flex items-center flex-col gap-[10px] mt-[20px] text-gray-400">
+      <div className="text-sm mx-auto flex items-center gap-[10px] mt-[20px] text-gray-400 justify-between">
         {/* <div className="flex gap-[5px] items-center">
           <FontAwesomeIcon icon={faEnvelope} className=" w-[12px] h-[12px]" />
           <p>info@HR.forum</p>
         </div> */}
+        <p>{translations.Header.adress[currentLang]}</p>
+
         <div className="flex gap-[5px] items-center">
           <FontAwesomeIcon icon={faCopyright} className="w-[12px] h-[12px]" />
           <p>{translations.Header.footer[currentLang]}</p>

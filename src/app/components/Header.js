@@ -61,12 +61,12 @@ export default function Header() {
 
         <div className="flex items-center gap-[20px]">
           <LanguageSwitcher currentLang={currentLang} isScrolled={bgColor === "white"} />
-          <Link
-            href={`/${currentLang}/registration`}
+                    {/* <Link
+            href={`https://apa.kz/${currentLang}`}
             className="px-[30px] h-[50px] flex text-white text-[20px] items-center rounded-[360px] bg-[var(--customaccent)]"
           >
             {translations.Header.registration[lang]}
-          </Link>
+          </Link> */}
         </div>
       </div>
     </header>

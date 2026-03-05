@@ -18,10 +18,10 @@ export default function Home({ params }) {
             <h1 className="uppercase text-white xl:text-[68px] text-[50px] xl:leading-[68px] leading-[50px] whitespace-pre-line ">{translations.Main.title[lang]}</h1>
           </div>
 
-            <Link href={translations.Main.buttonLink[lang]} className="px-[50px] h-[70px] w-fit flex text-white text-[20px] items-center rounded-[360px] bg-[var(--customaccent)]">
+            {/* <Link href={translations.Main.buttonLink[lang]} className="px-[50px] h-[70px] w-fit flex text-white text-[20px] items-center rounded-[360px] bg-[var(--customaccent)]">
                 {translations.Main.button[lang]}
                 <object data="/program.svg" className="ml-[10px] w-[20px] h-[20px]" />
-            </Link>
+            </Link> */}
 
         </div>
 
@@ -66,7 +66,7 @@ export default function Home({ params }) {
 
     <Sections />
     <Speakers />
-    {/* <News /> */}
+    <News />
     <Partners />
 
       <div className="container mx-auto flex flex-col md:flex-row mt-[100px] h-full">

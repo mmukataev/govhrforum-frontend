@@ -1,5 +1,3 @@
-import Registration from "@/[lang]/registration/page";
-
 const translations = {
     Header: {
         about: {
@@ -31,6 +29,11 @@ const translations = {
             en: "2025 All rights reserved.",
             ru: "2025 Все права защищены.",
             kz: "2025 Құқықтардың бәрі қорғалған."
+        },
+        adress: {
+            en: "33A Abay Avenue, Astana, Republic of Kazakhstan (entrance from Beibitshilik Street)",
+            ru: "проспект Абая, 33А, город Астана, Республика Казахстан (вход со стороны улицы Бейбитшилик)",
+            kz: "Абай даңғылы, 33А, Астана қаласы, Қазақстан Республикасы (Бейбітшілік көшесі жағынан кіру)"
         }
     },
 
@@ -51,9 +54,9 @@ const translations = {
             kz: "Бағдарлама"
         },
         buttonLink: {
-            en: "/programs/En.pdf",
-            ru: "/programs/Ru.pdf",
-            kz: "/programs/Kz.pdf"
+            en: "/programs/ForumEN.pdf",
+            ru: "/programs/ForumRU.pdf",
+            kz: "/programs/ForumKZ.pdf"
         },
     },
 
